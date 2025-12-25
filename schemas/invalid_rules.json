@@ -1,0 +1,16 @@
+{
+  "email": [
+    "invalid_format",
+    "empty",
+    "missing",
+    "only_spaces",
+    "leading_trailing_spaces",
+    "too_long"
+  ],
+  "string": [
+    "shorter_than_min",
+    "empty",
+    "only_spaces",
+    "too_long"
+  ]
+}
