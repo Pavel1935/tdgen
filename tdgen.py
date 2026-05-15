@@ -27,26 +27,23 @@ def parse_args():
 
     return parser.parse_args()
 
+
 def generate_valid_value(field_schema):
     """
     генерируем валидное значение для ОДНОГО поля
     на основании его описания в схеме
     """
-
     # тип поля (email, string, int)
     field_type = field_schema["type"]
 
-    
     if field_type == "email":
         # рандомный  email
         return "email@email.com"
-
     
     elif field_type == "string":
         # если min_length не указан  берём 1
         min_length = field_schema.get("min_length", 1)
         return "a" * min_length
-
     
     elif field_type == "int":
         # если min не указан  берём 0
@@ -56,6 +53,7 @@ def generate_valid_value(field_schema):
     # неизвестный тип и раис исключение
     else:
         raise ValueError(f"Unsupported field type: {field_type}")
+
 
 def generate_invalid_value(field_schema, rule):
     field_type = field_schema["type"]

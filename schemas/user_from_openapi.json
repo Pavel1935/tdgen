@@ -1,0 +1,12 @@
+{
+  "email": {
+    "required": true,
+    "type": "email"
+  },
+  "password": {
+    "required": true,
+    "type": "string",
+    "min_length": 8,
+    "max_length": 64
+  }
+}
